@@ -1,0 +1,35 @@
+{
+  "name": "pushSql",
+  "version": "1.0.0",
+  "description": "My ace module",
+  "license": "MIT",
+  "repository": "georgschlenkhoff/pushsql",
+  "author": {
+    "name": "georgschlenkhoff",
+    "email": "georg.schlenkhoff@gmail.com",
+    "url": "twitter.com/gschlenkhoff"
+  },
+  "main": "index.js",
+  "scripts": {
+    "babel": "npx babel --watch src --out-file ./lib/pushSql.js > /dev/null 2>&1 &",
+    "docs": "npx documentation build ./src/** -f html -o ./docs && npx documentation readme ./src/** --section=API",
+    "flow": "cd src && npx flow && cd ..",
+    "lint": "npx eslint src/; exit 0",
+    "test": "mocha --require babel-core/register test",
+    "watch": "npm run flow && npm run babel && nyc --require babel-core/register --reporter=text --reporter=html mocha --watch --recursive --timeout 5000 test/**/*.test.js"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-preset-env": "^1.6.1",
+    "chai": "^4.1.2",
+    "codecov": "^3.0.0",
+    "documentation": "^5.3.5",
+    "eslint": "^4.14.0",
+    "eslint-plugin-flowtype": "^2.41.0",
+    "flow-bin": "^0.61.0",
+    "mocha": "^5.0.0",
+    "nyc": "^11.4.1",
+    "sinon": "^4.1.6"
+  }
+}

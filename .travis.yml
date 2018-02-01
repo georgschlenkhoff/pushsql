@@ -1,8 +1,10 @@
 language: node_js
 node_js:
-  - "node"
+- node
 after_script:
-  - nyc --reporter=text-lcov npm test > coverage.lcov
-  - codecov
+- nyc --reporter=text-lcov npm test > coverage.lcov
+- codecov
 notifications:
   email: false
+  slack:
+    secure: FcZYPDhoQWs7KuskXHpWEi3QPiyWyYbIXglHBJvqkY6QwneXzHjLjc1/PRldF+zOgaVLgqUvCqznRRaf5c9w/4gepe64uZAv8jJkeC6SfacziHsnl6b2+XysNyLtra42To3h9ZGrzf6+wfvwEniw8A6ciPqhfXm68PkswLvcZQO8PexUE/I9z3BZjwwzKA8aMmmytGYfM4ytMyjgIDN+EUHBveVCobra+YW5M6e0xX2nb5ro49tEcmNfXos9TbfW6q/K8XCw6sq6wvRx/2p1JzcE7fDFdw8BUHx+f0f6WVdSduAnDDCteyHKNBNkQCaU6tRjFVlmRryhePcultO8nP7UmKevUdhFqJijACrmtsPukGy/CgcegsiKYvtw278AH838nX06rwrWVY7GqgUrkZqw/GPbv5BYOmnGfGJMtc4zUndPaFEYBDoxrfEgeOghc5967bpAkERGBnnl8JCntCDKKFdgIUB+7h/Cw2TmqLK0eMLB1tyENegrdYQT2cEeKQeJPoQ7HjHFZbYsPwCn0I4TNb3C2l5k9vPesdQLkKhvWDaGEKd77ncG2ZYJKvP4nK67H7uubMzhWWpYBRueUeOlW6Ji1PGhkHk45jA50GRKIr9NZi1X805+FOOPBihKAjwsDtrjD9oZnelPA3N/peKe3cgRf2Eh+6guTzerCz0=

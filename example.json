@@ -1,0 +1,11 @@
+{
+  "db": {
+    "type": "dropbox",
+    "url": "http://somelink.com",
+    "token": "${process.env.DROPBOX_TOKEN}"
+  },
+  "variables": {
+    "a": "SELECT col from table;"
+  },
+  "message": "Your message is ${a}"
+}

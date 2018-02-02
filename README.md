@@ -1,16 +1,39 @@
 # pushsql [![NPM version][npm-image]][npm-url][![Build Status][build-status]][build-url][![codecov][codecov]][codecov-url][![dependencies Status][dependencies-status][dependencies-url]][![devDependencies Status][devDependencies-status]][devDependencies-url][![Gitter Support][gitter-image]][gitter-url]
 
-> My ace module
+> Build push notifications, for e.g. Pusher, from various SQL statements.
 
 ## Features
 
+* Configure push notifications from SQL statements
+* Use variables that will be replaced by SQL results
+* Download databases files from Dropbox
+* Support for SQLite databases
+
 ## Installation
 
+Install pushSql from with npm:
+
 ```
-npm install 
+npm i -g pushSql
 ```
 
 ## Usage
+
+Create configuration file, `push.js`:
+
+```
+{
+  "db": {
+    "type": "dropbox",
+    "url": "http://somelink.com",
+    "token": "process.env.DROPBOX_TOKEN"
+  },
+  "variables": {
+    "a": "SELECT col from table;"
+  },
+  "message": "Your message is ${a}"
+}
+```
 
 ## API
 
